@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  profiling: true,
   experimental: {
-    runtime: 'edge',
-    reactRoot: 'concurrent',
-    serverComponents: true
+    serverComponents: true,
+    concurrentFeatures: true,
+    reactMode: 'concurrent',
+    runtime: 'nodejs'
   }
 }
 
 module.exports = nextConfig
+
